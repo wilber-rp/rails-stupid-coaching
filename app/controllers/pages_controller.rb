@@ -9,12 +9,12 @@ class PagesController < ApplicationController
 
     if @question == @question.upcase
       if @question.include?('?')
-         @answer = 'Silly question, get dressed and go to work!'
-       elsif @question == 'I am going to work right now!'
-         @answer = ''
-       else
-         @answer = "I don't care, get dressed and go to work!"
-       end
+        @answer = 'Silly question, get dressed and go to work!'
+      elsif @question == 'I am going to work right now!'
+        @answer = ''
+      else
+        @answer = "I don't care, get dressed and go to work!"
+      end
     else
       @question.include?('PIZZA?') ? @answer = 'I can feel your motivation! Silly question, get dressed and go to work!' : nil
       @question.include?('pizza!') ? @answer = "I don't care, get dressed and go to work!" : nil
